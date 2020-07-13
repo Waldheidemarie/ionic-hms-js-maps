@@ -1,5 +1,7 @@
 {
   "name": "hms-js-map",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

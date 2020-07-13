@@ -18,6 +18,23 @@
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 </head>
+<script>
+  function initMap() {
+    console.log("Map script is initialized");
+  }
+  function loadMapScript() {
+    const apiKey = encodeURIComponent(
+          "CV8Aw1EA9pku7HPWfUaUNManWlstMIzk6zbNfHXZ9NFJrOUx1QDTIqF2U2oNT70nwVh3wVJTVDz0GFdKFwaOnyKwWdOV"
+        );
+    const src = `https://mapapi.cloud.huawei.com/mapjs/v1/api/js?callback=initMap&key=${apiKey}`;
+
+    
+    const mapScript = document.createElement('script');
+    mapScript.setAttribute('src', src);
+    document.head.appendChild(mapScript);
+  }
+  loadMapScript();
+</script>
 
 <body>
   <app-root></app-root>
